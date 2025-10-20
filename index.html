@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> flight Simulator</title>
+
+  <!-- Three.js import -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <!-- ✅ 게임 시작 전 UI -->
+  <div id="controls-info">
+    <h2>✈️ FLIGHT SIMULATOR</h2>
+    <h3>Fly Freely!</h3>
+    <button id="start-button">🚀 START GAME 🚀</button>
+    <p>
+      Controls:<br />
+      W / S : Pitch<br />
+      A / D : Roll<br />
+      ↑ / ↓ : Throttle<br />
+      Space : Fire Missile<br />
+      B : Drop Bomb<br />
+      C : Change Camera<br />
+      R : Reset Camera
+    </p>
+  </div>
+
+  <!-- ✅ HUD (게임 중 표시) -->
+  <div id="hud">
+    <div class="stats">
+      <div>🏎 <span id="speed">0</span> m/s</div>
+      <div>🛫 ALT <span id="altitude">0</span> m</div>
+      <div>⚙️ THR <span id="throttle">0</span>%</div>
+      <div>⭐ SCORE <span id="score">0</span></div>
+      <div>⏱ <span id="timer">00:00</span></div>
+      <div>📍 CHK <span id="checkpoint">-</span></div>
+    </div>
+  </div>
+
+  <!-- ✅ Three.js 진입 -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
